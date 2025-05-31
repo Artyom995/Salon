@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Элит-Стиль - Салон красоты премиум класса</title>
+    <title>Элит-Стиль - Салон красоты</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -58,16 +58,48 @@
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
+        
+        @media (max-width: 1024px) {
+            .booking-section {
+                background-image: url('./picsvg_download.svg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100%; /* Ensure it takes full height of the section */
+            }
+            .booking-section .md\:w-1\/2.mb-10.md\:mb-0.md\:pr-10 {
+                display: none; /* Hides the div containing the img element */
+            }
+            .booking-section .md\:w-1\/2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%; /* Ensure the form container takes full width */
+                padding: 1rem; /* Add some padding for better spacing */
+            }
+            .booking-form {
+                max-width: 500px; /* Optional: limit form width for better appearance */
+                width: 100%; /* Ensure form takes available space */
+                margin: 0 auto; /* Additional centering fallback */
+            }
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
     <!-- Header -->
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <i class="fas fa-scissors text-2xl text-amber-800 mr-2"></i>
-                <h1 class="text-2xl font-bold text-gray-800">Элит<span class="text-amber-700">-Стиль</span></h1>
-            </div>
+            <a href="./">
+                <div class="flex items-center">
+                    <i class="fas fa-scissors text-2xl text-amber-800 mr-2"></i>
+                    <h1 class="text-2xl font-bold text-gray-800">Элит<span class="text-amber-700">-Стиль</span></h1>
+                </div>
+
+            </a>
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="nav-link text-gray-700 hover:text-amber-700">Главная</a>
                 <a href="#services" class="nav-link text-gray-700 hover:text-amber-700">Услуги</a>
@@ -76,8 +108,8 @@
                 <a href="#contacts" class="nav-link text-gray-700 hover:text-amber-700">Контакты</a>
             </nav>
             <div class="flex items-center">
-                <a href="tel:+79991234567" class="hidden md:block mr-4 text-gray-700 hover:text-amber-700">
-                    <i class="fas fa-phone-alt mr-2"></i>+7 (999) 123-45-67
+                <a href="tel:+79220780098" class="hidden md:block mr-4 text-gray-700 hover:text-amber-700">
+                    <i class="fas fa-phone-alt mr-2"></i>+7 (922) 078-00-98
                 </a>
                 <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
@@ -93,8 +125,8 @@
                 <a href="#masters" class="text-gray-700 hover:text-amber-700">Мастера</a>
                 <a href="#gallery" class="text-gray-700 hover:text-amber-700">Галерея</a>
                 <a href="#contacts" class="text-gray-700 hover:text-amber-700">Контакты</a>
-                <a href="tel:+79991234567" class="text-gray-700 hover:text-amber-700">
-                    <i class="fas fa-phone-alt mr-2"></i>+7 (999) 123-45-67
+                <a href="tel:+79220780098" class="text-gray-700 hover:text-amber-700">
+                    <i class="fas fa-phone-alt mr-2"></i>+7(922)078-00-98
                 </a>
             </div>
         </div>
@@ -104,10 +136,10 @@
     <section id="home" class="hero min-h-screen flex items-center justify-center text-white pt-20">
         <div class="container mx-auto px-6 text-center fade-in">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">Ваш идеальный образ начинается здесь</h1>
-            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Элитный салон красоты, где каждая деталь создана для вашего совершенства</p>
-            <button class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Салон красоты, где каждая деталь создана для вашего совершенства</p>
+            <a href="#booking-section" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 inline-block">
                 Записаться онлайн
-            </button>
+            </a>
         </div>
     </section>
 
@@ -117,7 +149,7 @@
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
                     <h2 class="text-3xl font-bold text-gray-800 mb-6">О салоне <span class="text-amber-700">Элит-Стиль</span></h2>
-                    <p class="text-gray-600 mb-4">Добро пожаловать в наш элитный салон красоты, где каждая клиентка становится королевой. Мы создаем не просто прически, а произведения искусства, подчеркивающие вашу индивидуальность.</p>
+                    <p class="text-gray-600 mb-4">Добро пожаловать в наш салон красоты, где каждая клиентка становится королевой. Мы создаем не просто прически, а произведения искусства, подчеркивающие вашу индивидуальность.</p>
                     <p class="text-gray-600 mb-6">Наши мастера - профессионалы международного уровня, регулярно повышающие квалификацию на мировых чемпионатах парикмахерского искусства.</p>
                     <div class="flex flex-wrap gap-4">
                         <div class="flex items-center">
@@ -465,27 +497,15 @@
         </div>
     </section>
 
-    <!-- Booking -->
-    <section class="py-20 bg-amber-700 text-white">
+    <!-- --booking-section-- -->
+    <section class="py-20 bg-amber-700 text-white" id="booking-section">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center">
+            <div class="flex flex-col md:flex-row items-center booking-section">
                 <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
-                    <h2 class="text-3xl font-bold mb-6">Записаться на прием</h2>
-                    <p class="mb-6">Оставьте заявку и наш администратор свяжется с вами в течение 15 минут для уточнения деталей.</p>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-phone-alt mr-3 text-xl"></i>
-                        <span class="text-lg">+7 (999) 123-45-67</span>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-map-marker-alt mr-3 text-xl"></i>
-                        <span class="text-lg">ул. Престижная, 15, Москва</span>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-clock mr-3 text-xl"></i>
-                        <span class="text-lg">Ежедневно с 9:00 до 21:00</span>
-                    </div>
+                    <img src="./picsvg_download.svg" alt="img_tree" style="width: 70%; opacity: 0.7;">
                 </div>
                 <div class="md:w-1/2">
+
                     <div class="booking-form p-8 rounded-xl shadow-lg">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Форма записи</h3>
                         <form>
@@ -535,14 +555,14 @@
                             <h4 class="text-lg font-semibold text-gray-800 mb-2 flex items-center">
                                 <i class="fas fa-map-marker-alt text-amber-700 mr-3"></i> Адрес
                             </h4>
-                            <p class="text-gray-600">ул. Престижная, 15, Москва</p>
+                            <p class="text-gray-600">г.Тобольск, 15-й м-н, 18</p>
                         </div>
                         
                         <div class="mb-6">
                             <h4 class="text-lg font-semibold text-gray-800 mb-2 flex items-center">
                                 <i class="fas fa-phone-alt text-amber-700 mr-3"></i> Телефон
                             </h4>
-                            <p class="text-gray-600">+7 (999) 123-45-67</p>
+                            <p class="text-gray-600"><a href="tel:+79220780098">+7 (922) 078-00-98</a></p>
                         </div>
                         
                         <div class="mb-6">
@@ -566,8 +586,7 @@
                             </h4>
                             <div class="flex space-x-4">
                                 <a href="#" class="text-gray-600 hover:text-amber-700 text-xl"><i class="fab fa-instagram"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-amber-700 text-xl"><i class="fab fa-vk"></i></a>
-                                <a href="#" class="text-gray-600 hover:text-amber-700 text-xl"><i class="fab fa-facebook"></i></a>
+                                <a href="https://vk.com/elitstyle_tobolsk" class="text-gray-600 hover:text-amber-700 text-xl"><i class="fab fa-vk"></i></a>
                                 <a href="#" class="text-gray-600 hover:text-amber-700 text-xl"><i class="fab fa-telegram"></i></a>
                             </div>
                         </div>
@@ -575,8 +594,10 @@
                 </div>
                 
                 <div class="md:w-1/2 md:pl-10">
-                    <div class="h-full rounded-xl overflow-hidden shadow-md">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.373789429729!2d37.61842331593084!3d55.75367698055309!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311b!2z0JrRgNCw0YHQvdCw0Y8g0J_RgNC10YHQvdC-0LLQsNGC0LXQu9GM!5e0!3m2!1sru!2sru!4v1623760000000!5m2!1sru!2sru" width="100%" height="100%" style="min-height: 400px;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="h-full rounded-xl overflow-hidden shadow-md">  
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2029.0343472025227!2d68.305271!3d58.226183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTjCsDEzJzM0LjMiTiA2OMKwMTgnMTguOCJF!5e0!3m2!1sru!2sru!4v1717160000000" width="100%" height="100%" style="min-height:400px;" allowfullscreen="" loading="lazy"></iframe>                    
+                    
+                    
                     </div>
                 </div>
             </div>
@@ -592,7 +613,7 @@
                         <i class="fas fa-scissors text-2xl text-amber-700 mr-2"></i>
                         <h2 class="text-2xl font-bold">Элит<span class="text-amber-600">-Стиль</span></h2>
                     </div>
-                    <p class="text-gray-400 max-w-xs">Салон красоты премиум класса, где создаются идеальные образы для самых взыскательных клиентов.</p>
+                    <p class="text-gray-400 max-w-xs">Салон красоты, где создаются идеальные образы для самых взыскательных клиентов.</p>
                 </div>
                 
                 <div class="mb-8 md:mb-0">
@@ -611,11 +632,11 @@
                     <ul class="space-y-2">
                         <li class="flex items-center">
                             <i class="fas fa-map-marker-alt text-amber-600 mr-2"></i>
-                            <span class="text-gray-400">ул. Престижная, 15, Москва</span>
+                            <span class="text-gray-400">г.Тобольск, 15-й м-н, 18</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone-alt text-amber-600 mr-2"></i>
-                            <span class="text-gray-400">+7 (999) 123-45-67</span>
+                            <span class="text-gray-400"><a href="tel:+79220780098" class="text-gray-400 hover:text-amber-600">+7 (922) 078-00-98</a></span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-envelope text-amber-600 mr-2"></i>
@@ -624,7 +645,7 @@
                     </ul>
                 </div>
                 
-                <div>
+                <!-- <div>
                     <h3 class="text-lg font-semibold mb-4">Подписаться</h3>
                     <p class="text-gray-400 mb-4">Будьте в курсе наших акций и новинок</p>
                     <div class="flex">
@@ -638,7 +659,7 @@
                         <a href="#" class="text-gray-400 hover:text-amber-600 text-xl"><i class="fab fa-vk"></i></a>
                         <a href="#" class="text-gray-400 hover:text-amber-600 text-xl"><i class="fab fa-facebook"></i></a>
                     </div>
-                </div>
+                </div> -->
             </div>
             
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
