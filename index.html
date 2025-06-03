@@ -676,9 +676,9 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-24 right-8 bg-amber-700 text-white w-12 h-12 rounded-full shadow-lg">
+    <!-- <button id="back-to-top" class="fixed bottom-8 right-8 bg-amber-700 text-white w-12 h-12 rounded-full shadow-lg hidden">
         <i class="fas fa-arrow-up"></i>
-    </button>
+    </button> -->
 
     <script>
         // Mobile Menu Toggle
@@ -760,7 +760,7 @@
             event.preventDefault();
             const form = event.target;
             grecaptcha.ready(function() {
-                grecaptcha.execute('6LepYFQrAAAAAHZxYCrfefNbk4WpyRZ9hElZiIUM', {action: 'submit'}).then(function(token) {
+                grecaptcha.execute('6LdWiTIrAAAAAPkNKl2venguhorkTxGPAhJJKR9x', {action: 'submit'}).then(function(token) {
                     form.querySelector('#recaptcha-token').value = token;
                     const data = {
                         name: form.querySelector('#name').value,
